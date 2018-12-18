@@ -6,10 +6,10 @@ source "$PLUGIN_CORE_AVAILABLE_PATH/common/functions"
 source "$PLUGIN_CORE_AVAILABLE_PATH/config/functions"
 source "$PLUGIN_CORE_AVAILABLE_PATH/nginx-vhosts/functions"
 
-app="$1"; verify_app_name "$app"
+APP="$1"; verify_app_name "$APP"
 
 eval "$(config_export global)"
-eval "$(config_export app "$app")"
+eval "$(config_export app "$APP")"
 
 max_upload_size="$MAX_UPLOAD_SIZE"
 
